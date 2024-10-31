@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data save local strorage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+<h1 class="text-center p-3" >Sign up Form</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <img src="./img/images (5).jpeg" class="w-100 h-100 rounded" alt="">
+    </div>
+    <div class="col-sm-6">
+        <div class="card h-100">
+            <div class="card-body">
+
+                <div class="alert alert-success d-none" id="successAlert" role="alert"></div>
+                <div class="alert alert-danger d-none" id="dangerAlert" role="alert"></div>
+                <form id="ragister">
+
+                    <div class="row"> 
+                        
+                        <div class="col-sm-6 mt-3">
+                            <label for="firstName">fristName</label>
+                            <input type="text" class="form-control" id="firstName">
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            <label for="LastName">LastName</label>
+                            <input type="text" class="form-control" id="lastName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 mt-3">
+                            <label for="Password">Password</label>
+                            <input type="password" class="form-control"  onkeyup="checkPasswordLength()" id="Password">
+                            <span id="helper"></span>
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            <label for="ConfirmPasword">ConfirmPasword</label>
+                            <input type="password" class="form-control"  onkeyup=" checkConfirmPasword()"   id="confirmPasword">
+                            <span id="confirmHelper"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt-3">
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" class="form-control">
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt-3">
+                            <label for="Phone">Phone</label>
+                            <input type="number" name="" id="Phone" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 mt-3">
+                            <button type="submit" class=" btn btn-success w-100 mt-2">Save</button>
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            <button type="reset" class=" btn btn-danger w-100 mt-2 ">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="row">
+    <div id="col-sm-12">
+        <h1 class="text-center p-4">All Users</h1>
+    </div>
+    <table  id="userTable" class=" table table-hover table-striped ">
+        <thead class="table-dark">
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+</div>
+
+</div>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/b2Wootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
